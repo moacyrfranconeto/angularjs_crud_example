@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ffpesquisaApp">
+<head ng-controller="homeCtrl">
+  <!--<link rel="icon" href="styles/img/favicon.ico">-->
+  <link href="components/angular-bootstrap/bootstrap.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal FFpesquisa">
+  <meta name="author" content="Moacyr Franco Neto">
+
+  <title>Portal FFPesquisa</title>
+
+  <nav class="nav nav-pills nav-stacked" role="navigation"  >
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bar1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activetab == '/home'}"><a href="#/home">Home</a></li>
+            <li ng-class="{active: activetab == '/administrativo'}"><a href="#/administrativo">Administrativo</a></li>
+            <li ng-class="{active: activetab == '/pesquisa'}"><a href="#/pesquisa">Pesquisa</a></li>
+            <li ng-class="{active: activetab == '/ajuda'}"><a href="#/ajuda">Ajuda</a></li>
+        </ul>
+    </div>
+  </nav >
+
+</head>
+<body>
+
+<div ng-view> </div>
+
+</body>
+
+
+</html>
+<!-- build:js js/angular.min.js -->
+<script type="text/javascript" src="components/angular/angular.js"></script>
+<script type="text/javascript" src="components/angular-route/angular-route.js"></script>
+
+<!-- endbuild -->
+
+<script type="text/javascript" src="scripts/ffpesquisaApp.js"></script>
+<script type="text/javascript" src="scripts/controllers/administrativoCtrl.js"></script>
+<script type="text/javascript" src="scripts/controllers/ajudaCtrl.js"></script>
+<script type="text/javascript" src="scripts/controllers/pesquisaCtrl.js"></script>
+<script type="text/javascript" src="scripts/controllers/homeCtrl.js"></script>
+
+
+<script type="text/javascript" src="scripts/services/pesquisadorService.js"></script>
+<script type="text/javascript" src="scripts/services/restService.js"></script>
+
+<!-- angular-bootstrap -->
+<script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap.js"></script>
+<script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
